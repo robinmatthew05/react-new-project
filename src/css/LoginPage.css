@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+#backgroundPic 
+{
+  margin-top: 205px;
+  margin-left: 33px;
+  left: 60px;
+  width: 95vh;
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.LoginBackground 
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#welcome 
+{
+  margin-top: 65px;
+  margin-left: 13%;
+  text-align: left;
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+#login_account 
+{
+  margin-top: 1%;
+  margin-left: 13%;
+  width: 300px;
+  height: 25px;
+  color: var(--unnamed-color-ffffff);
+  text-align: left;
+  font: normal normal 900 22px/25px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+#Logo {
+  margin-top: 90px;  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+#completarcampos{  
+  margin-top: 53px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 19%;
+}
+
+label{
+  float: left;
+  margin-left: 16px;
+  text-align: left;
+  font: normal normal medium 10px/14px Avenir;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-size: 16px;
+}
+
+#passwordLabel{
+  margin-top: 20px;
+}
+
+#txtusername {
+  top: 334px;
+  margin-top: 4px;
+  left: 519px;
+  width: 328px;
+  height: 49px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #AAAAAA80;
+  border-radius: 24px;
+  opacity: 1;
+  padding: 0px 16px;
+}
+
+#txtpassword {
+  top: 334px;
+  margin-top: 4px;
+  left: 519px;
+  width: 328px;
+  height: 49px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #AAAAAA80;
+  border-radius: 24px;
+  opacity: 1;
+  padding: 0px 16px;
+}
+
+.passwordDiv img 
+{
+  margin-top: 1%;
+  margin-right: 3.5%;
+  width: 3.5vh;
+  position: absolute;
+  right: 2vh;
+  opacity: 1;
+}
+
+#hidePassword{
+  margin-right: 80px;
+}
+
+.p-viewer2{
+  float: right;
+  margin-top: -35px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+  cursor:pointer;
+}
+#btnlogin 
+{
+  /* margin-top: 5vh;
+  margin-left: 13%;
+  width: 430px;
+  height: 6vh;
+  background: var(--unnamed-color-c22426) 0% 0% no-repeat padding-box;
+  background: #C22426 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  border: none;
+  opacity: 1;
+  color: #FFFFFF;
+  font: 90% Roboto;
+  letter-spacing: 1px;
+  text-align: center; */
+  top: 530px;
+  left: 516px;
+  width: 360px;
+  height: 50px;
+  background: #007DD0 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  border: none;
+  opacity: 1;
+  margin: 0;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.forgotPass p 
+{
+  margin-left: 49vh;
+  font-size: 90%;
+  color: #FFFFFF;
+}
+
+.forgotPass a 
+{
+  margin-left: 1%;
+  color: #C22426;
+}
+/*# sourceMappingURL=main.css.map */

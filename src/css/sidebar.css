@@ -1,0 +1,361 @@
+.sidebar {
+	position: fixed;
+	width: 213px;
+	height: 100%;
+	background: #ffffff;
+	padding: 30px 0;
+	box-shadow: 0px 3px 20px #00000029;
+}
+
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.line6 {
+	margin-top: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	width: 162px;
+	border: 1px solid #E0E0E0;
+}
+
+.sidebar h2 {
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.sidebar ul li a {
+	display: block;
+}
+
+.logo {
+	margin-left: 13%;
+}
+
+.forgetpass {	
+	height: 25%;
+	weight: 25%;
+	margin-left: 5%;
+	margin-top: 25%;
+}
+.sidebar ul li a{
+	color: #444;
+	display: block;
+}
+
+.sidebar ul li:hover{
+	background: #ffffff;
+}
+
+.set{
+	background-color: #ffffff;
+	margin-top: -5%;
+	border-radius: 18px;
+	border: 0px solid black;
+	outline: 0 !important;
+}
+
+#asset{
+	padding:8%;
+}
+
+.imgasset{
+	width: 7%;
+	margin-top: 5%;
+	margin-right: 75%;
+}
+
+.assettitle{
+	margin-top: -8%;
+	color: var(--unnamed-color-ac2022);
+	text-align: center;
+	font: normal normal normal 14px/16px Roboto;
+	letter-spacing: 0px;
+	color: #444;
+	opacity: 1;
+}
+
+.line{
+	margin-top: 17%;
+	margin-left: 15%;
+	width: 130px;
+	opacity: 1;
+}
+
+#fas{
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 65%;
+
+}
+
+.Product{
+	color: var(--unnamed-color-ac2022);
+	text-align: 10%;
+	font: normal normal normal 13px/16px Roboto;
+	letter-spacing: 0 px;
+	opacity: 1;
+	margin-top: 2%;
+	padding: 7%;
+	text-indent: 15%;
+	text-decoration: none;
+}
+
+.Product:hover{
+	background: #f8ebeb 0% 0% no-repeat padding-box;
+	border-radius: 18px;
+	outline: 0 !important;
+	text-decoration: none;
+}
+
+.Product:focus{
+	background: #EAEAEA 0% 0% no-repeat padding-box;
+	border-radius: 18px;
+}
+
+.Category{
+	color: var(--unnamed-color-ac2022);
+	text-align: 10%;
+	font: normal normal normal 13px/16px Roboto;
+	letter-spacing: 0px;
+	opacity: 1;
+	margin-top: 2%;
+	padding: 7%;
+	text-indent: 15%;
+	text-decoration: none;
+}
+
+.Category:hover{
+	background: #f8ebeb 0% 0% no-repeat padding-box;
+	border-radius: 18px;
+	outline: 0 !important;
+	text-decoration: none;
+}
+.Category:focus{
+	background: #EAEAEA 0% 0% no-repeat padding-box;
+	border-radius: 18px;
+}
+
+.Suppliers{
+	color: var(--unnamed-color-ac2022);
+	text-align: 10%;
+	font: normal normal normal 13px/16px Roboto;
+	letter-spacing: 0px;
+	opacity: 1;
+	margin-top: 2%;
+	padding: 7%;
+	text-indent: 15%;
+	text-decoration: none;
+}
+
+.Suppliers:hover{
+	background: #f8ebeb 0% 0% no-repeat padding-box;
+	border-radius: 18px;
+	outline: 0 !important;
+	text-decoration: none;
+}
+
+.Suppliers:focus{
+	background: #EAEAEA 0% 0% no-repeat padding-box;
+	border-radius: 18px;
+}
+
+.salesTitle, .salesTitle:hover{
+	font: normal normal normal 13px/16px Roboto;
+	letter-spacing: 0px;
+	opacity: 1;
+	margin-top: -20%;
+	margin-left: 15%;
+	text-decoration: none;
+}
+
+.pendingOrdersTitle, .salesTitle:hover{
+	font: normal normal normal 13px/16px Roboto;
+	letter-spacing: 0px;
+	opacity: 1;
+	margin-top: -20%;
+	margin-left: 15%;
+	text-decoration: none;
+}
+
+.forPickupTitle, .salesTitle:hover{
+	font: normal normal normal 13px/16px Roboto;
+	letter-spacing: 0px;
+	opacity: 1;
+	margin-top: -20%;
+	margin-left: 15%;
+	text-decoration: none;
+}
+
+#sales, #pendingOrders, #forPickup, #product{
+	height: 43px;
+	width: 93%;
+	margin-top: 3%;
+	align-self: center;
+	border-radius: 30px;
+	padding:10%;
+
+}
+#product:active, #product:hover{
+	background-color: #EAEAEA;
+	align-self: center;
+	/* text-decoration: none; */
+	border-radius: 30px;
+	
+}
+
+#sales:active, #sales:hover, #pendingOrders:active, #pendingOrders:hover, #forPickup:active, #forPickup:hover, .salesTitle:active{
+	background-color: #f8ebeb;
+	color: #AC2022 !important;
+	align-self: center;
+	/* text-decoration: none; */
+	border-radius: 30px;
+	
+}
+
+#salesimg{
+	width: 7%;
+	margin-top: -13%;
+	
+}
+
+#pendingimg{
+	width: 7%;
+	margin-top: -13%;
+	
+}
+
+#forPickupimg{
+	width: 7%;
+	margin-top: -13%;
+}
+
+/* ACCORDION */
+
+.accordion-section {
+	display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.accordion-title {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	align-self: right;
+	border: none;
+	outline: none;
+	transition: background-color 0.6s ease;
+	margin-left: 30%;
+	border-radius: 15px;
+}
+ 
+.accoDesign{
+	height: 50px;
+	width: 100px;
+	background-color: #555;
+	border-radius: 50%;
+}
+
+.active {
+	background-color: #f8ebeb;
+}
+
+.active-child {
+	background-color: #EAEAEA;
+}
+
+.accordion-icon {
+	margin-left: auto;
+	transition: transform 0.6s ease;
+}
+  
+.rotate {
+	transform: rotate(90deg);
+}
+  
+.accordion-content {
+	background-color:rgb(255, 255, 255);
+	overflow: hidden;
+	transition: max-height 0.6s ease;
+}
+  
+.accordion-text {
+	font-weight: 400;
+	font-size: 14px;
+	border-radius: 25px;
+}
+.name
+{
+    margin-left: 17px;
+    width: 68px;
+    height: 16px;
+    color: var(--unnamed-color-ac2022);
+    text-align: center;
+    font: normal normal normal 14px/16px Roboto;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+ul.menu-horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.menu-horizontal:after {
+    content: '';
+    clear: both;
+    float: none;
+    display: block;
+}
+
+ul.menu-horizontal li {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    height: 100%;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+
+/* The magic happens here! */
+ul.menu-horizontal li:before {
+    content: '';
+    display: inline;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.child-asset{
+	height: 43px;
+    width: 93%;
+    margin-top: 3%;
+    align-self: center;
+    border-radius: 30px;
+    padding: 10%;
+}
+.asset-panel{
+	height: 100px;
+	width: 100%;
+	margin: auto;
+}
+.block{
+	display: none !important;
+}
+
+
+.active-txt-color{
+	color:#AC2022 !important;
+}
+
