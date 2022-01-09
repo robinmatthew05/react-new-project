@@ -2,16 +2,14 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Sidebar from './sidebar';
 
-import logo from './logo/sidebar-logo.png';
+import logo from './logo/dashboardLogo.png';
 import volunteer from './logo/volunteerIcon.svg';
 import like from './logo/likeIcon.svg';
-import deleteIcon from './logo/icon-delete.svg';
-import editIcon from './logo/icon-edit.svg';
 // import detailsIcon from './logo/icon-view-details.svg';
 import { CategoryModal } from './modal/categoryModal';
 import swal from 'sweetalert';
 
-export default class Product extends Component {
+export default class Dashboard extends Component {
 
     auth = JSON.parse(localStorage.getItem('auth'))
 

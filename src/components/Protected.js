@@ -6,7 +6,7 @@ import {
 function Protected(props){
     const Cmp = props.cmp
     var auth = JSON.parse(localStorage.getItem('auth'))
-    return <div>{auth ? <Cmp/>: <Redirect to="product"></Redirect>} </div>
+    return <div>{auth ? <Cmp/>: <Redirect to="dashboard"></Redirect>} </div>
 }
 
 export default Protected;

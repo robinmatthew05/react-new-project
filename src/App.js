@@ -6,7 +6,10 @@ import './css/style.css';
 import './css/sidebar.css';
 
 import Auth from './components/Auth'
-import Product from './components/Product';
+import Dashboard from './components/Dashboard';
+import Volunteer from './components/Volunteer';
+import Donations from './components/Donations';
+import AdsandPartners from './components/AdsandPartners';
 import Protected from './components/Protected'
 
 import {
@@ -24,20 +27,20 @@ function App() {
 
       <Router>
         <Switch>
-          <Route path="/product">
-            <Protected cmp={Product} />
+          <Route path="/dashboard">
+            <Protected cmp={Dashboard} />
           </Route>
-          {/* <Route path="/category">
-            <Protected cmp={Category} />
+          <Route path="/volunteer">
+            <Protected cmp={Volunteer} />
           </Route>
-          <Route path="/suppliers">
-            <Protected cmp={Suppliers} />
+          <Route path="/donations">
+            <Protected cmp={Donations} />
           </Route>
-          <Route path="/pendingorder">
-            <Protected cmp={PendingOrders} />
-          </Route> */}
+          <Route path="/adspartners">
+            <Protected cmp={AdsandPartners} />
+          </Route>
           <Route path="/">
-            <Product />
+            <Auth />
           </Route>
         </Switch>
       </Router>

@@ -14,40 +14,66 @@ import swal from 'sweetalert';
 
 class Auth extends Component {
 
-    login() {
-        // console.warn("state", this.state)
-        // fetch('http://xingwei-motors-ws.ml/api/auth', {
-        //     method: "POST",
-        //     headers: {
-        //         "Accept": "applcation/json",
-        //         "Content-Type": "applcation/json",
-        //     },
-        //     body: JSON.stringify(this.state)
-        // }).then((result) => {
-        //     result.json().then((resp) => {
-        //         if (resp.data.message == "Invalid Credentials") {
-        //             swal("Error", "Inalid username or password", "error");
-        //         }
-        //         else {
-        //             console.log(resp.data.token);
-        //             localStorage.setItem("auth", JSON.stringify(resp.data.token));
-        //             window.location.reload(false);
-        //            // history.push('/product');
+    // login() {
+    //     console.warn("state", this.state)
+    //     fetch('Ivolunteer.ml/api/auth', {
+    //         method: "POST",
+    //         headers: {
+    //             "Accept": "applcation/json",
+    //             "Content-Type": "applcation/json",
+    //         },
+    //         body: JSON.stringify(this.state)
+    //     }).then((result) => {
+    //         result.json().then((resp) => {
+    //             if (resp.data.message == "Invalid Credentials") {
+    //                 swal("Error", "Inalid username or password", "error");
+    //             }
+    //             else {
+    //                 console.log(resp.data.token);
+    //                 localStorage.setItem("auth", JSON.stringify(resp.data.token));
+    //                 window.location.reload(false);
+    //                // history.push('/product');
 
-        //         }
-        //     })
-        // })
+    //             }
+    //         })
+    //     })
+    // }
+
+    login() {
+        console.warn("state", this.state)
+        fetch('http://Ivolunteer.ml/api/login', {
+            method: "POST",
+            headers: {
+                "Accept": "applcation/json",
+                "Content-Type": "applcation/json",
+            },
+            body: JSON.stringify(this.state)
+        }).then((result) => {
+            result.json().then((resp) => {
+                if (resp.error == "Unauthorized") {
+                    swal("Error", "Inalid username or password", "error");
+                }
+                else {
+                    console.log(resp.access_token);
+                    localStorage.setItem("auth", JSON.stringify(resp.access_token));
+                    window.location.reload(false);
+                   // history.push('/product');
+
+                }
+            })
+        })
     }
+
 
     render() {
 
-        // var auth = JSON.parse(localStorage.getItem('auth'))
+        var auth = JSON.parse(localStorage.getItem('auth'))
 
 
         return (
             <div>
                 {
-                    // auth ? <Redirect to="/product" /> : null
+                    auth ? <Redirect to="dashboard" /> : null
                 }
                 <div>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />

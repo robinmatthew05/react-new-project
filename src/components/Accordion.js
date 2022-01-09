@@ -1,40 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react';
 
-const Accordion = props => {
-  const [active, setActive] = useState(false)
-  const contentRef = useRef(null)
-
-  useEffect(() => {
-    contentRef.current.style.maxHeight = active ? `${contentRef.current.scrollHeight}px` : '0px'
-  }, [contentRef, active])
-
-  const toogleActive = () => {
-    setActive(!active)
-  }
-
-  const titleStyle = {
-    fontWeight: 450,
-    fontSize: '11px',
-  }
+const Accordion = ({ title, content }) => {
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="accordion-section">
-      <button className="accordion-title" onClick={toogleActive} class="set">
-      <i class='fas fa-angle-down' id="fas"></i>
-        <img src={props.source} class={props.class} class="imgasset"/>
-        <p style={titleStyle} class="assettitle">{props.title}</p>
-        <span className={active ? 'accordion-icon rotate': 'accordion-icon'}> 
-        </span>
-      </button>
-
-      <div
-        ref={contentRef}
-        className="accordion-content"
-      >
-        {props.children}
+    <div className="accordion-item">
+      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+        <div>{title}</div>
+        <div>{isActive ? '-' : '+'}</div>
       </div>
+      {isActive && <div className="accordion-content">{content}</div>}
     </div>
-  )
-}
+  );
+};
 
-export default Accordion
+export default Accordion;

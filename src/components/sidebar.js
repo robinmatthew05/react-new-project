@@ -3,11 +3,26 @@ import React, { Component } from 'react'
 import logo from './logo/sidebar-logo.png';
 import assetIcon from './logo/icon-asset.svg';
 import assetIconBlack from './logo/icon-asset-black.svg';
-import pickupIcon from './logo/icon-forpickup.svg';
-import pendingIcon from './logo/icon-pendingorders.svg';
-import saleIcon from './logo/icon-sales.svg';
 import forgetpass from './logo/forgetpass.svg';
 import pedingIconRed from './logo/pending-orders-red.svg';
+
+
+import adsAndPartners from './logo/icon-adspartners.svg';
+import content from './logo/icon-content.svg';
+import dashboardIc from './logo/icon-dashboard.svg';
+import donation from './logo/icon-donations.svg';
+import volunteer from './logo/icon-users.svg';
+
+import activeDashboard from './logo/icon-active-dashboard.svg';
+import activeVolunteer from './logo/icon-active-volunteer.svg';
+import activeContent from './logo/icon-active-content.svg';
+import activeDonations from './logo/icon-active-donations.svg';
+import activeAds from './logo/icon-active-ads.svg';
+
+import sampleIcon from './logo/sampleIcon.png';
+
+import { accordionData } from './utils/content';
+
 
 import {
     BrowserRouter as Router,
@@ -54,8 +69,11 @@ class sidebar extends Component {
     render() {
 
         const homeClass = window.location.pathname === "/" ? "active" : "";
-        const sales = window.location.pathname.match(/^\/category/) ? "active" : "";
-        const pendingOrders = window.location.pathname.match(/^\/pendingorder/) ? "active" : "";
+        const dashboard = window.location.pathname.match(/^\/dashboard/) ? "active" : "";
+        const actvolunteer = window.location.pathname.match(/^\/volunteer/) ? "active" : "";
+        const actdonation = window.location.pathname.match(/^\/donation/) ? "active" : "";
+        const actadsAndPartners = window.location.pathname.match(/^\/adspartners/) ? "active" : "";
+    
         const assets = (window.location.pathname.match(/^\/product/) || window.location.pathname.match(/^\/category/)|| window.location.pathname.match(/^\/suppliers/)) ? "" : "block";
         const product = window.location.pathname.match(/^\/product/) ? "active-child" : "";
         const category = window.location.pathname.match(/^\/category/) ? "active-child" : "";
@@ -69,54 +87,73 @@ class sidebar extends Component {
         const pendingOrders_txt_color = window.location.pathname.match(/^\/pendingorder/) ? "active-txt-color" : "";
 
         //active image
-        const asset_img = (window.location.pathname.match(/^\/product/) || window.location.pathname.match(/^\/category/)|| window.location.pathname.match(/^\/suppliers/)) ? assetIcon : assetIconBlack;
-        const pending_orders_img = window.location.pathname.match(/^\/pendingorder/) ? pedingIconRed : pendingIcon;
+        const dashboard_img = window.location.pathname.match(/^\/dashboard/) ? activeDashboard : dashboardIc;
+        const volunteer_img = window.location.pathname.match(/^\/volunteer/) ? activeVolunteer : volunteer;
+        const content_img = window.location.pathname.match(/^\/volunteer/) ? activeVolunteer : volunteer;
+        const donations_img = window.location.pathname.match(/^\/donation/) ? activeDonations : donation;
+        const ads_img = window.location.pathname.match(/^\/adspartners/) ? activeAds : adsAndPartners;
+        
         return (
             <div>
                 <div class="sidebar">
                     <img class="logo" src={logo} />
                    
-                    <hr id="line6" class="line"/>
-                    
+                    <ul class ="menu-horizontal" style={{paddingTop: "40px"}}>
+                        <li id="sales" className={dashboard}>
+                            <img src={dashboard_img} class="icon-image" id="salesimg"/>
+                            <Link to="dashboard" class="salesTitle" > Dashboard
+                            </Link>
+                        </li>
 
-                    <ul class ="menu-horizontal">
+                        <li id="sales" className={actvolunteer}>
+                            <img src={volunteer_img} class="icon-image" id="salesimg"/>
+                            <Link to="volunteer" class="salesTitle" > Volunteers
+                            </Link>
+                        </li>
+
                         <li id="sales" className={asset_maintenace}>
-                        <img src={asset_img} class="icon-image" id="salesimg"/>
-                            <Link to="product" className={"salesTitle " + asset_txt_color} > Asset Maintenance
+                        <img src={content} class="icon-image" id="salesimg"/>
+                            <Link to="product" className={"salesTitle " + asset_txt_color} > Content Management
                             </Link>
                         </li>
                         <li id="product"  className={assets + " " + product}>
                             <img class="icon-image" id="salesimg"/>
-                            <Link to="product" class="salesTitle" > Products
+                            <Link to="product" class="salesTitle" > Activities
                             </Link>
                         </li>
                         <li id="product" className = {assets + " " + category} >
                             <img class="icon-image" id="salesimg"/>
-                            <Link to="category" class="salesTitle" > Category
+                            <Link to="category" class="salesTitle" > News
                             </Link>
                         </li>
-                        <li id="product" className = {assets + " " + suppliers}>
-                            <img class="icon-image" id="salesimg"/>
-                            <Link to="suppliers" class="salesTitle" > Supplier
+
+                        <li id="sales" className={actdonation}>
+                            <img src={donations_img} class="icon-image" id="salesimg"/>
+                            <Link to="donations" class="salesTitle" > Donations
                             </Link>
                         </li>
-                        
-                        <li id="sales" className={sales}>
-                            <img src={saleIcon} class="icon-image" id="salesimg"/>
-                            <Link to="home" class="salesTitle" > Sales
+                        <li id="sales" className={actadsAndPartners}>
+                            <img src={ads_img} class="icon-image" id="salesimg"/>
+                            <Link to="adspartners" class="salesTitle" > Ads and Partners
                             </Link>
                         </li>
-                        <li id="pendingOrders" className={pendingOrders}>
-                            <img src={pending_orders_img} class="icon-image" id="pendingimg"/>
-                            <Link to="pendingorder" className={"pendingOrdersTitle " + pendingOrders_txt_color}>Pending Orders</Link>
-                        </li>
-                        <li id="forPickup">
-                            <img src={pickupIcon} class="icon-image" id="forPickupimg" />
-                            <Link to="home" class="forPickupTitle">For Pickup</Link>
-                        </li>
+
+                        {/* <div className="accordion">
+        {accordionData.map(({ title, content }) => (
+          <Accordion title={title} content={content} />
+        ))}
+      </div> */}
+                        <div class="wrapperSidebar">
+                                    <div id="sideBarIcon">
+                                    <img src={sampleIcon} class="icon"></img>
+                                    </div>
+
+                                    <div id="sidebarName">
+                                        <p class="adminName">Juan Dela Cruz</p>
+                                        <p class="logout">Log out</p>
+                                    </div>
+                                </div>
                     </ul>
-
-
                 </div>
             </div>
         );
